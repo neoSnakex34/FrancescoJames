@@ -14,7 +14,7 @@ function toggleButton() {
 
   <header>
 
-    <nav class="navbar navbar-dark navbar-expand-lg">
+    <nav class="navbar navbar-dark sticky-top navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand">
           neoSnakex34
@@ -79,6 +79,28 @@ html, body {
   width: 100%;
   padding-left: 2vw;
   padding-right: 2vw;
+}
+@media (min-width: 1024px){
+  .navbar {
+    min-height: 15vh;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+  .navbar-brand,
+  .nav-item {
+    font-size: 1.5em;
+  }
+  
+  .navbar-toggler {
+    font-size: 2em;
+  }
+
 }
 
 .navbar-brand {
