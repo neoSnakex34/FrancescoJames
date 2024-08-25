@@ -5,20 +5,21 @@ import { ref } from 'vue';
 const buttonToggler = ref(false);
 
 function toggleButton() {
-  console.log( buttonToggler.value);
+  // console.log( buttonToggler.value);
   buttonToggler.value = !buttonToggler.value;
 }
 </script>
 
 <template>
 
+  <div id="app">
   <header>
 
     <nav class="navbar navbar-dark sticky-top navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand">
+        <RouterLink to="/" class="navbar-brand">
           neoSnakex34
-        </a>
+        </RouterLink>
 
         <button :class="{'active': buttonToggler}" @click="toggleButton" class="navbar-toggler rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,10 +34,10 @@ function toggleButton() {
               <RouterLink to="/" class="nav-link" aria-current="page" >Home</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/skills" class="nav-link" href="#">Skills</RouterLink>
+              <RouterLink to="/skills" class="nav-link" aria-current="page">Skills</RouterLink>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <RouterLink to="/projects" class="nav-link" aria-current="page">Projects</RouterLink>
             </li>
           
           </ul>
@@ -45,27 +46,24 @@ function toggleButton() {
     </nav>
 
   </header>
+
   <main>
     <router-view></router-view>
   </main>
 
   <footer>
   </footer> 
-
+  </div>
 </template>
+
 
 <style scoped>
 
-.navbar-container {
-  width: 70vw;
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
 
 #navbarNav {
   justify-content: flex-end;
@@ -77,35 +75,14 @@ html, body {
   left: 0;
   background-color: var(--background);
   width: 100%;
-  padding-left: 2vw;
-  padding-right: 2vw;
-}
-@media (min-width: 1024px){
-  .navbar {
-    min-height: 15vh;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-@media (max-width: 768px) {
-
-  .navbar {
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-  }
-  .navbar-brand,
-  .nav-item {
-    font-size: 1.5em;
-  }
-  
-  .navbar-toggler {
-    font-size: 2em;
-  }
-
-}
-
-.navbar-brand {
+.navbar-brand,
+.navbar-brand:focus{
   font-weight: bold;
-  background-image: linear-gradient(to right, var(--blue) 40%, var(--light-blue) , var(--foreground));
+  background-image: linear-gradient(to right, var(--yellow), var(--orange));
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -115,12 +92,12 @@ html, body {
 }
 
 .navbar-brand:hover {
-  color: var(--foreground);
+  color: var(--yellow);
 }
 
 
 .navbar-toggler {
-  background-color: var(--purple);
+  background-color: var(--orange);
   border: none;
   outline: none;
   box-shadow: none;
@@ -141,7 +118,7 @@ html, body {
 }
 
 .nav-link {
-  color: var(--blue);
+  color: var(--orange);
 }
 .nav-link:active,
 .nav-link:hover,
@@ -149,4 +126,31 @@ html, body {
   color: var(--foreground);
 }
 
+
+@media (min-width: 1024px){
+  .navbar {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .navbar-brand,
+  .nav-item {
+    font-size: 1.5em;
+  }
+  
+  .navbar-toggler {
+    font-size: 2em;
+  }
+
+}
+
+
 </style>
+

@@ -4,7 +4,7 @@ import App from './App.vue'
 
 import router from './router'
 import './assets/variables.scss'
-
+import './assets/styles.css'
 
 export const createApp = ViteSSG(
     App,
