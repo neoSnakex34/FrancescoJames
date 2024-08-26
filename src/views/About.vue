@@ -7,10 +7,10 @@
         <div class="card-body">
             <h5 class="card-title">Francesco James Fanti</h5>
             <p class="card-text-top">Frontend WebDev</p>
-            <p class="card-text-bot">( B.Sc. Student - Sapienza )</p>
+            <p class="card-text-bot">( Enrolled B.Sc. Informatics - Sapienza )</p>
             <div class="d-flex justify-content-between">
             <button @click="goTo('https://github.com/neoSnakex34')" class="bi bi-github rounded-pill contact-btn"></button> 
-            <button @click="toggleDownload" class="bi bi-journal rounded-pill contact-btn"></button> 
+            <button @click="toggleDownload" class="bi bi-file-person rounded-pill contact-btn"></button> 
             <button @click="goTo('https://www.linkedin.com/in/francesco-james-fanti-393696215/')" class="bi bi-linkedin rounded-pill contact-btn"></button>
             </div>
         </div>
@@ -32,13 +32,17 @@
 <style scoped>
     .box {
         padding-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .card {
-        margin: 2 auto;
+        /* margin: 2 auto; */
         padding: 5px;
-        width: 18em;
+        width: 35%;
         background-color: var(--light-blue);
         z-index: 0;
+        box-shadow: 0 10px 20px 0 var(--background);
     }
     .card img {
         object-fit: cover;
@@ -73,12 +77,13 @@
 
     @media (max-width: 768px) {
         .box {
-            padding-top: 30px;
+            padding-top: 10px;
+            position: fixed center;
         } 
         .card {
-            max-width: 70vw;
-            margin: 2 auto;
-            padding: 5px;
+            width: 100%;
+            /* margin: 2 auto; */
+            /* padding: 5px; */
         }
     }
 </style>

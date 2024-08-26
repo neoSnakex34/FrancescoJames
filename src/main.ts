@@ -1,8 +1,11 @@
 import { ViteSSG     } from 'vite-ssg'
-import './style.css'
 import App from './App.vue'
 
 import router from './router'
+
+import '@mdi/font/css/materialdesignicons.min.css';
+
+import './style.css'
 import './assets/variables.scss'
 import './assets/styles.css'
 

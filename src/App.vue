@@ -1,13 +1,35 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
-import { ref } from 'vue';
+import { RouterLink, RouterView, useRoute } from 'vue-router';
+import { ref, watchEffect } from 'vue';
+
+const navbarBrandText = ref(`Francesco James's Portfolio`);
 
 const buttonToggler = ref(false);
+
+const route = useRoute();
 
 function toggleButton() {
   // console.log( buttonToggler.value);
   buttonToggler.value = !buttonToggler.value;
 }
+
+function changeNavbarBrandText() {
+  switch (route.path) {
+    case '/':
+      return `Francesco James`;
+    case '/skills':
+      return `My Skills`;
+    case '/projects':
+      return `My Projects`;
+    default:
+      return `Francesco James`;
+  }
+}
+
+watchEffect(() => {
+  navbarBrandText.value = changeNavbarBrandText();
+});
+
 </script>
 
 <template>
@@ -17,13 +39,14 @@ function toggleButton() {
 
     <nav class="navbar navbar-dark sticky-top navbar-expand-lg">
       <div class="container-fluid">
-        <RouterLink to="/" class="navbar-brand">
-          neoSnakex34
-        </RouterLink>
+        <div class="navbar-brand">
+          {{ navbarBrandText }}
+        </div>
 
         <button :class="{'active': buttonToggler}" @click="toggleButton" class="navbar-toggler rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="icon bi bi-list"></i>
+          <i v-if="!buttonToggler" class="icon bi bi-three-dots"></i>
+          <i v-else class="icon bi bi-arrow-bar-up "></i>
           <!-- <span class="icon">v</span> -->
         </button>
         
@@ -122,9 +145,12 @@ function toggleButton() {
 }
 .nav-link:active,
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.nav-link.router-link-active,
+ .nav-link.router-link-exact-active{
   color: var(--foreground);
 }
+
 
 
 @media (min-width: 1024px){
