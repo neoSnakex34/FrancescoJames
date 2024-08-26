@@ -9,7 +9,7 @@
         <ProjectCard
             title="Studio Messini"
             description="Website for medical purposes in Vue.js"
-            link1="https://www.studio-messini.pages.dev"
+            link1="https://studio-messini.pages.dev"
             img="./studio-messini.webp"
         />
     </div>
