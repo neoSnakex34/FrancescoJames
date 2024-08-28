@@ -77,8 +77,8 @@
 
     @media (max-width: 768px) {
         .box {
-            padding-top: 10px;
-            position: fixed center;
+            justify-content: center;
+            align-items: center;
         } 
         .card {
             width: 100%;

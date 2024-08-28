@@ -1,27 +1,21 @@
 {
-  "name": "myportfolio",
+  "name": "nuxt-app",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite-ssg build",
-    "preview": "vite preview"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "vue": "^3.4.37"
-  },
-  "devDependencies": {
-    "@unhead/vue": "^1.10.0",
-    "@vitejs/plugin-vue": "^5.1.2",
+    "nuxt": "^3.13.0",
     "sass-embedded": "^1.77.8",
-    "typescript": "^5.5.3",
-    "vite": "^5.4.1",
-    "vite-ssg": "^0.23.8",
-    "vue-router": "^4.4.3",
-    "vue-tsc": "^2.0.29"
+    "vue": "latest"
   }
 }

@@ -6,19 +6,17 @@
 </template>
 
 <script setup lang="ts">
-    import IconList from '../components/IconList.vue';
-    import { ref } from 'vue';
-
     const categories = ref([
         {
             name: 'Frontend tools',
             icons: [
                 { iconName: 'mdi-vuejs', iconTitle: 'Vue.js' },
+                { iconName: 'mdi-nuxt', iconTitle: 'Nuxt' },
                 { iconName: 'mdi-language-javascript', iconTitle: 'JavaScript' },
                 { iconName: 'mdi-language-typescript', iconTitle: 'TypeScript' },
                 { iconName: 'mdi-language-html5', iconTitle: 'HTML5' },
                 { iconName: 'mdi-language-css3', iconTitle: 'CSS3' },
-                { iconName: 'mdi-bootstrap', iconTitle: 'Bootstrap' }
+                { iconName: 'mdi-bootstrap', iconTitle: 'Bootstrap' },
             ]
         },
         {

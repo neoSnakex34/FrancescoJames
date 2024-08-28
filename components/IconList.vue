@@ -16,7 +16,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
 
 defineProps<{
     categories: { name: string, icons: {iconName: string, iconTitle: string}[] }[]

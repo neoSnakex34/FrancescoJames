@@ -8,15 +8,14 @@
         />
         <ProjectCard
             title="Studio Messini"
-            description="Website for medical purposes in Vue.js"
-            link1="https://studio-messini.pages.dev"
+            description="Nuxt3 modern website for a speech therapy clinic"
+            link1="https://studiomessini.com"
             img="./studio-messini.webp"
         />
     </div>
 </template>
 
 <script setup lang="ts">
-    import ProjectCard from '../components/ProjectCard.vue';
 </script>
 
 <style scoped>
