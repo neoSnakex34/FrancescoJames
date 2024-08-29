@@ -26,12 +26,20 @@ function changeNavbarBrandText() {
       return `My Skills`;
     case '/projects':
       return `My Projects`;
+    case '/services':
+      return `Services`;
     default:
       return `Francesco James`;
   }
 }
 
 watchEffect(() => {
+  loading.value = true;
+  setTimeout(() => {
+    loading.value = false;
+  }, 500);
+  // this is what triggers the watchEffect builtin, cause
+  // the reactive dependency is encapsulated in changeNavbarBrandText()
   navbarBrandText.value = changeNavbarBrandText();
 });
 
@@ -63,6 +71,9 @@ watchEffect(() => {
               </li>
               <li class="nav-item">
                 <NuxtLink to="/skills" class="nav-link" aria-current="page">Skills</NuxtLink>
+              </li>
+              <li class="nav-item">
+                <NuxtLink to="/services" class="nav-link" aria-current="page">Services</NuxtLink>
               </li>
               <li class="nav-item">
                 <NuxtLink to="/projects" class="nav-link" aria-current="page">Projects</NuxtLink>
