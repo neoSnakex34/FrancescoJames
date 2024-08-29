@@ -25,7 +25,7 @@
     }
 
     function toggleDownload() {
-        window.open('https://github.com/neoSnakex34/myPortfolio/blob/master/public/CV.pdf');
+        window.open('https://github.com/neoSnakex34/myPortfolio/blob/master/public/cv.pdf');
     }
 </script>
 

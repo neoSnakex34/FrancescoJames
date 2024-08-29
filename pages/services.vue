@@ -11,7 +11,7 @@
     </ul>
     <div class="contact-text">
       please feel free to reach out to me
-      [contacts are on my <a href="https://github.com/neoSnakex34/myPortfolio/blob/master/public/CV.pdf" target="_blank" ref="noreferrer noopener"  style="font-weight: bold; color: var(--green)">CV</a>]
+      [contacts are on my <a href="https://github.com/neoSnakex34/myPortfolio/blob/master/public/cv.pdf" target="_blank" ref="noreferrer noopener"  style="font-weight: bold; color: var(--green)">CV</a>]
     </div>
 
   </div>
