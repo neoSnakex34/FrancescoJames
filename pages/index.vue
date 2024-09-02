@@ -21,11 +21,11 @@
 
 <script setup lang="ts">
     function goTo(url: string) {
-        window.open( url);
+        window.open(url, "_blank", "noopener, noreferrer");
     }
 
     function toggleDownload() {
-        window.open('https://github.com/neoSnakex34/myPortfolio/blob/master/public/cv.pdf');
+        window.open('/cv.pdf', "_blank", "noopener, noreferrer");
     }
 </script>
 
